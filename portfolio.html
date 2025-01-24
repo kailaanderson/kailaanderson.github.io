@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Kaila Anderson Portfolio</title>
+        <link href="portfoloProject.css" rel="stylesheet">
+        <script src="scripts.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="assets/Logo.svg" alt= "Kaila Anderson Logo" class="logo">
+            <!-- Nav bar -->
+             <nav>
+                <a href="home.html">Home</a>
+                <a class="active" href="portfolio.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="whims.html">Whims</a>
+                <a href="contact.html">Contact</a>
+             </nav>
+        </header>
+
+        <content>
+            <h1 style="text-align: center;">My Portfolio</h1>
+            
+            <div class="portfolio">
+                <div class="selector">
+                    <span class="option active" onclick="showProjects('passion')">Passion Projects</span>
+                    <span class="separator">|</span>
+                    <span class="option" onclick="showProjects('client')">Client Projects</span>
+                </div>
+                <div class="projects passion active">
+                    <!-- Passion projects content here -->
+                    <div class="project">
+                        <!--Language Bin Project-->
+                        <img src="assets/Language Bin.jpg" alt="Language Bin Preview">
+                        <h2>Language Bin</h2>
+                        <p>Mobile App</p>
+                        <p>This app was designed to assist young adults in their language learning journey
+                         by implementing organizational learning techniques and proving a mindful studying environment.
+                        </p>
+                        <a href="languagebins.html">
+                            <button class="alt">See Design Details</button>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <!--Stay F.M. Project-->
+                        <img src="assets/Felix.jpg" alt="Stay FM Preview">
+                        <h2>Stay FM</h2>
+                        <p>Web App</p>
+                        <p>This web application was designed to create a warm, cozy environment for the viewers of "Stay FM"
+                            (content created by Lee Felix of Stray Kids) to enjoy the videos.
+                           </p>
+                        <a href="stayfm.html">
+                            <button class="alt">See Design Details</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="projects client">
+                    <!-- Client projects content here -->
+                     <div class="centered-container">
+                        <h2>Awaiting a call for inspiration</h2>
+                        <h1 style="font-size: 40px;">Have a project in mind that I can design?</h1>
+                        <a href="contact.html">
+                            <button style="font-size: 48px; margin-bottom: 70px;">Contact Me!</button>
+                        </a>
+                     </div>
+                </div>
+                <script src="scripts.js"></script>       
+            </div>
+                 
+
+        </content>
+
+        <footer>
+            <!--left side: name and contact-->
+            <div class="footer-left">
+                <p>Kaila Anderson</p>
+                <a href="contact.html">Contact Me!</a>
+                <p>Youngstown, Ohio</p>
+            </div>
+                
+            <!--middle: links to social media-->
+            <div class="footer-center">
+                <a href="https://www.linkedin.com/in/kailaanderson0418/" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn Icon"></a>
+                <a href="mailto:kailaanderson0418@gmail.com"><img src="assets/gmail.png" alt="Gmail Icon"></a>
+                <a href="https://github.com/kailaanderson" target="_blank"><img src="assets/github.png" alt="GitHub Icon"></a>
+            </div>
+    
+            <!--right side: image credits for images used-->
+            <div class="footer-right">
+                <p>Image Credits:</p>
+                <a href="https://www.flaticon.com/free-icons/identify" title="identify icons" target="_blank">Identify icons created by Karyative - Flaticon</a>
+                <br>
+                <a href="https://www.flaticon.com/free-icons/responsive-design" title="responsive design icons" target="_blank">Responsive design icons created by Flat Icons - Flaticon</a>
+                <br>
+                <a href="https://www.flaticon.com/free-icons/brainstorm" title="brainstorm icons" target="_blank">Brainstorm icons created by Freepik - Flaticon</a>
+                <br>
+                <a href="https://www.facebook.com/MonicaPerkinsPhotography/" target="_blank">Monica Perkins Photography</a>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,470 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+h1 {
+    font-family: "Open Sans", serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FBC9BA;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Comic Neue", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #62978D;
+}
+
+p {
+    font-family: "Comic Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #333645;
+}
+
+button {
+    background-color: #BFE3DD;
+    color: #333645;
+    padding: 10px 30px; 
+    margin: 5px;
+    border: 4px solid #9FD2C9; 
+    border-radius: 50px; 
+    font-size: 16px; 
+    font-family: "Comic Neue", serif;
+    cursor: pointer; 
+    text-align: center; 
+    outline: none; 
+    transition: background-color 0.3s ease; 
+}
+
+button.alt {
+    background-color: #FCE6A6;
+    border: 4px solid #FDD86C;
+}
+
+button:hover {
+    background-color: #62978D; 
+}
+
+button.alt:hover {
+    background-color: #FAC450;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+
+
+header {
+
+    background-color: #FBC9BA;
+    width: 100%;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; */
+
+}
+header img {
+    margin-left: 30px;
+    max-width: 620px;
+    max-height: 120px
+}
+
+.project-header {
+    background-color: #FCFBF6;
+    
+    width: 100%;
+    height: 100px;
+
+    border-bottom: 3px solid #62978D;
+
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+}
+nav a {
+    margin: 65px 20px 0 15px;
+    font-family: "Open Sans", serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ff9778;
+    transition: 0.5s; 
+}
+nav a:hover {
+    color: #C3D9EE;
+    -webkit-text-stroke: 1px #828ab1;
+    transition: 0.5s;
+    cursor: pointer; 
+}
+nav a.active{
+    color: #C3D9EE;
+    -webkit-text-stroke: 1px #828ab1;
+}
+
+body {
+    background-image: url(./assets/background.jpg);
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+
+content {
+    flex: 1;
+    margin-bottom: 180px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    margin: 20px 40px;
+    padding: 10px;
+}
+
+section.tagline {
+    grid-column: 2 / 12;
+    border: 10px solid #C3D9EE;
+    background-color: #f3f8fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section.skills {
+    grid-column: 2/12;
+    border: 2px solid #FDD86C;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+skill {
+    margin: 20px;
+    flex-direction: column;
+    max-width: 200px;
+}
+
+skill img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+
+.portfolio {
+    text-align: center;
+}
+
+.portfolio img {
+    max-width: 600px;
+    max-height: 600px;
+    border: 4px solid #C3D9EE;
+}
+
+
+
+.selector {
+    margin-bottom: 30px;
+}
+.option {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-family: "Comic Neue", serif;
+    font-size: 24px;
+    color: #333645;
+    text-decoration: none;
+}
+.separator {
+    color: #333;
+    margin: 0 10px;
+}
+.option.active {
+    text-decoration: underline;
+}
+
+.projects {
+    display: none;
+    margin: 20px 60px; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+}
+
+.projects.active {
+    display: grid;
+}
+
+.project {
+    position: relative;
+    max-width: 700px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.todoNav-container {
+    position: absolute;
+    top: 250px;
+    right: 30px;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.5 ease;
+}
+.sticky {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+.todoNav {
+    position: absolute;
+    top: 150px;
+    
+    margin-bottom: 20px;
+    margin-left: 90px;
+    z-index: 2;
+
+    transition: all 0.5 ease;
+}
+.todoNav ul {
+    list-style-type: none;
+    font-family: "Comic Neue", serif;
+    color: #333645;
+    font-size: 24px;
+}
+.todoNav li {
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 0 15px 13px;
+    transition: all 0.5 ease;
+}
+.checked {
+    text-decoration: line-through;
+    position: relative;
+    transition: all 0.5 ease;
+}
+.checked::before {
+    content: '✔';
+    position: absolute;
+    left: -60px;
+    top: -5px;
+    color:#62978D;
+    transition: all 0.5 ease;
+
+}
+
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.element {
+    margin: 20px 20px 0px 5px;
+    max-width: 1000px;
+    padding: 10px;
+}
+
+.element h2, p {
+    margin-bottom: 10px;
+}
+
+.element img {
+    max-width: 450px;
+    max-height: auto;
+    margin: 10px;
+}
+
+about {
+    margin: 30px auto;
+    padding: 30px;
+    display: flex;
+    grid-column: 2 / 12;
+    border: 10px solid #C3D9EE;
+    background-color: #f3f8fd;
+    justify-content: space-around;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+about p {
+    max-width: 500px;
+    font-size: 20px;
+}
+about img {
+    max-width: 700px;
+    max-height: 700px;
+    margin: 10px 20px;
+    border: 3px solid #828ab1;
+}
+about text {
+    border: 1px solid #C3D9EE;
+    margin: 10px 20px;
+    padding: 20px;
+}
+
+.whims-section {
+    display: flex;
+    margin: 30px 80px;
+    padding: 20px;
+    justify-content: left;
+}
+
+.whims-section-alt {
+    display: flex;
+    margin: 30px 80px;
+    padding: 20px;
+    justify-content: right;
+}
+
+  
+.whims-photo, .whims-section video, .whims-section-alt video {
+    max-width: 700px;
+    margin-right: 20px;
+    border: 3px solid #FAC450;
+}
+
+.whims-section video, .whims-section-alt video {
+    max-height: 500px;
+}
+  
+.whims-description {
+    margin: 20px;
+    max-width: 400px;
+}
+
+
+
+
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form-container {
+
+
+    background-color: #f3f8fd;
+    border: 3px solid #C3D9EE;
+    
+    padding: 20px;
+    margin: 30px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin: 10px 0 5px 0;
+    font-family: "Open Sans", serif;
+    color: #333645;
+}
+input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    color: #333645;
+    font-family: "Comic Neue", serif;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+footer {
+    width: 100%;
+    height: auto;
+
+    background-color: #333645;
+    color: #FCFBF6;
+
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    position: relative;
+}
+
+.footer-left{
+    margin-left: 20px;
+}
+.footer-center{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.footer-center a {
+    margin: 0 10px;
+}
+.footer-right{
+    margin-right: 40px;
+}
+
+footer p{
+    color: #FCFBF6;
+    margin: 0;
+}
+
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+    font-family: "Comic Neue", serif";
+}
+footer a img {
+    max-width: 50px;
+    max-height: 50px;
+}
