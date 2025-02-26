@@ -7,7 +7,8 @@ h1 {
     font-size: 40px;
     font-weight: bold;
     color: #FBC9BA;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -17,6 +18,7 @@ h2 {
     font-style: normal;
     font-size: 24px;
     color: #62978D;
+    margin-bottom: 3px;
 }
 
 p {
@@ -25,13 +27,16 @@ p {
     font-style: normal;
     font-size: 16px;
     color: #333645;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    line-height: 25px;
 }
 
 button {
     background-color: #BFE3DD;
     color: #333645;
     padding: 10px 30px; 
-    margin: 5px;
+    margin: 8px;
     border: 4px solid #9FD2C9; 
     border-radius: 50px; 
     font-size: 16px; 
@@ -150,15 +155,29 @@ section {
     margin: 20px 40px;
     padding: 10px;
 }
-
+.tagline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 section.tagline {
-    grid-column: 2 / 12;
     border: 10px solid #C3D9EE;
     background-color: #f3f8fd;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 900px;
+}
+section.tagline p {
+    margin-left: 30px;
+    max-width: 500px;
+    text-align: left;
+}
+.tagline-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
 }
 
 section.skills {
@@ -180,6 +199,27 @@ skill {
 skill img {
     max-width: 200px;
     max-height: 200px;
+}
+.feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.featuredDesign {
+    width: 900px;
+    border: 4px solid #C3D9EE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.featuredDesign img {
+    max-width: 600px;
+    max-height: 600px;
 }
 
 
@@ -294,27 +334,32 @@ skill img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
     justify-content: center;
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 0 auto;
     text-align: center;
 }
 
 .element {
-    margin: 20px 20px 0px 5px;
-    max-width: 1000px;
-    padding: 10px;
+    margin: 20px 30px 0px 25px;
+    max-width: 900px;
+    padding: 15px;
 }
-
+.element h1 {
+    font-size: 30px;
+}
 .element h2, p {
     margin-bottom: 10px;
 }
 
 .element img {
-    max-width: 500px;
-    max-height: auto;
-    margin: 10px;
+    max-width: 700px;
+    max-height: 900px;
+    display: block;
+    margin: 15px auto;
 }
 
 about {
