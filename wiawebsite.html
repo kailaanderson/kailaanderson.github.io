@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Kaila Anderson Portfolio</title>
+        <link href="portfoloProject.css" rel="stylesheet">
+        <script src="scripts.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="assets/Logo.svg" alt= "Kaila Anderson Logo" class="logo">
+            <!-- Nav bar -->
+             <nav>
+                <a href="home.html">Home</a>
+                <a class="active" href="portfolio.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="whims.html">Whims</a>
+                <a href="contact.html">Contact</a>
+             </nav>
+        </header>
+
+        <div class="todoNav-container" id="todoNavContainer">
+            <img src="assets/ProjectNav.png" alt="ToDo List Image" class="todoBackground">
+
+            <div class="todoNav">
+                <ul>
+                    <li id="item1" onclick="navigateAndMark('section1', 'item1')">Introduce the Project</li>
+                    <li id="item2" onclick="navigateAndMark('section2', 'item2')">Review Wireframe Designs</li>
+                    <li id="item3" onclick="navigateAndMark('section3', 'item3')">View Completed Project</li>
+                    <li id="item4" onclick="navigateAndMark('section4', 'item4')">Reflect on Project</li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            window.onscroll = function() {makeSticky(); markSection();};
+        </script>
+
+        <content>
+            <!--Project Title-->
+            <div class="project-header">
+                <h1>Word In Action Website Development</h1>
+                <p style="text-align: center;"></p>
+            </div>
+
+            <!--Introduction-->
+            <div class="element" id="section1">
+                <h1>Project Introduction</h1>
+                <p>Word In Action Ministry is a church that I have been a member of for as long as I can remember. 
+                    I was honored with the opportunity to create a website for them with the task of making online 
+                    membership readily available and accesible.
+                </p>
+            </div>
+
+            <!--Wireframes-->
+            <div class="element" id="section2">
+                <h1>Wireframes</h1>
+                <img src="assets/WIA Moodboard.png" alt="Moodboard for Word In Action Website">
+
+                <p>My main focus with the moodboard was to extend upon the existing logo, using the same colors and font family. 
+                    To decide on the additional colors, I combined colors seen in the physical building, creating a cohesive and familiar palette.
+                </p>
+
+                <img src="assets/WIA Website.jpg" alt="Website Wireframes">
+                <p>
+                </p>
+            </div>
+
+            <!--Completed Project-->
+            <div class="element" id="section3">
+                <h1>Completed Website</h1>
+
+                <a href="https://www.wordinactiontrc.com/" class="centered-container">
+                    <button>View Complete Website</button>
+                </a> <br>
+                <br>
+                <video src="assets/WIA_Web.mp4" controls autoplay>
+                Website demo video not supported in this browser</video>
+                <!--Insert overall idea-->
+                <p>The end result has Online Membership as the center of the navigation bar, leading the user to a step-by-step process
+                    of becoming an online member. The remainder of the website encourages others to view the church service, stay updated with
+                    the church's social media accounts, and come to events.
+                </p>
+                <!--Highlight 3 key points-->
+            </div>
+
+            <!--Reflection-->
+            <div class="element" id="section4">
+                <h1>Reflection</h1>
+                <p>This project was a big step, giving me experience in client-work and using Wix as a Web Development tool. 
+                    I learned to turn client wants and needs into an interactive design, keeping in mind the main goals of the company 
+                    as well as their budget. This allowed me to utilize elements such as calendar management and google forms for 
+                    easy use and access for Church Leaders.  
+                </p>
+                <p>One of the main things I focused on for this project was accessibility and user-friendliness. For 
+                    church organizations, people of all ages and backgrounds need to be able to use and understand the website. This 
+                    challenged my thinking, helping me to iterate over my designs until landing on a balanced, user-friendly design.
+                </p>
+                <p>I am excited to publish this website as my first client-project and look forward to further improvements and 
+                    iterations as I gain more skill and knowledge.
+                </p>
+            </div>
+
+            <div class="centered-container">
+                <h2>Have a project in mind that I can design?</h2>
+                <a href="contact.html">
+                    <button style="font-size: 25px; margin-bottom: 20px;">Contact Me!</button>
+                </a>
+             </div>
+
+        </content>
+
+    </body>
+     <footer>
+            <!--left side: name and contact-->
+            <div class="footer-left">
+                <p>Kaila Anderson</p>
+                <a href="contact.html">Contact Me!</a>
+                <p>Youngstown, Ohio</p>
+                <a href="assets/Anderson_UIUXResume.pdf" download="Anderson_UIUXResume">Resume Download</a>
+            </div>
+                
+            <!--middle: links to social media-->
+            <div class="footer-center">
+                <a href="https://www.linkedin.com/in/kailaanderson0418/" target="_blank"><img src="assets/linkedin.png" alt="LinkedIn Icon"></a>
+                <a href="mailto:kailaanderson0418@gmail.com"><img src="assets/gmail.png" alt="Gmail Icon"></a>
+                <a href="https://github.com/kailaanderson" target="_blank"><img src="assets/github.png" alt="GitHub Icon"></a>
+            </div>
+    
+            <!--right side: image credits for images used-->
+            <div class="footer-right">
+                <p>Image Credits:</p>
+                <a href="https://www.flaticon.com/free-icons/identify" title="identify icons" target="_blank">Identify icons created by Karyative - Flaticon</a>
+                <br>
+                <a href="https://www.flaticon.com/free-icons/responsive-design" title="responsive design icons" target="_blank">Responsive design icons created by Flat Icons - Flaticon</a>
+                <br>
+                <a href="https://www.flaticon.com/free-icons/brainstorm" title="brainstorm icons" target="_blank">Brainstorm icons created by Freepik - Flaticon</a>
+                <br>
+                <a href="https://www.facebook.com/MonicaPerkinsPhotography/" target="_blank">Monica Perkins Photography</a>
+            </div>
+        </footer>
+</html>
